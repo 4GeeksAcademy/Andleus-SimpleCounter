@@ -12,7 +12,6 @@ const Counter = () => {
     const [millions, setMillions] = useState(0);
 
 
-
     let countU = 0;
     let countT = 0;
     let countH = 0;
@@ -20,12 +19,11 @@ const Counter = () => {
     let countTT = 0;
     let countHT = 0;
     let countM = 0;
-    // tal ...
     useEffect(() => {
         
         const interval = setInterval(() => {
             console.log("UNITS -> "+countU);
-            countU += 8;
+            countU += 1;
             setUnits(prevCount => prevCount + 1);
 
             if(countU > 9){ //Add to tens
@@ -67,7 +65,7 @@ const Counter = () => {
             
 
 
-        }, 0);
+        }, 1000);
 
         return () => {
             clearInterval(interval);
@@ -75,18 +73,21 @@ const Counter = () => {
 
     }, []);
 
+   
+
+
     return (
         <div className="row">
             <h1>Time here -&gt;</h1>
-            <div className="row  d-flex justify-content-center bg-black text-light">
-                <div className="col-1"><i class="fa-regular fa-clock"></i></div>
-                <div className="col-1">{millions}</div>
-                <div className="col-1">{hundredsThousands}</div>
-                <div className="col-1">{tensThousands}</div>
-                <div className="col-1">{unitsThousands}</div>
-                <div className="col-1">{hundreds}</div>
-                <div className="col-1">{tens}</div>
-                <div className="col-1">{units}</div>
+            <div className="row d-flex justify-content-center bg-black text-light">
+                <div className="cards col-1"><i class="fa-regular fa-clock fa-2xl"></i></div>
+                <div className="cards col-1"><span class="numbers">{millions}</span></div>
+                <div className="cards col-1"><span class="numbers">{hundredsThousands}</span></div>
+                <div className="cards col-1"><span class="numbers">{tensThousands}</span></div>
+                <div className="cards col-1"><span class="numbers">{unitsThousands}</span></div>
+                <div className="cards col-1"><span class="numbers">{hundreds}</span></div>
+                <div className="cards col-1"><span class="numbers">{tens}</span></div>
+                <div className="cards col-1"><span class="numbers">{units}</span></div>
             </div>
         </div>
     );

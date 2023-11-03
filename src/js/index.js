@@ -17,5 +17,7 @@ function App(){
 }
 
 
-//render your react application
-ReactDOM.render(<App />, document.querySelector("#app"));
+window.onload = () => {
+    //render your react application
+    ReactDOM.render(<App />, document.querySelector("#app"));
+}

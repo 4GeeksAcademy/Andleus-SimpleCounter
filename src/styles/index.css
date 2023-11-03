@@ -10,3 +10,20 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.cards{
+    padding: 2em;
+    margin: 1em;
+    background: rgb(54, 54, 54);
+    border: 1px rgb(68, 68, 68) solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.numbers{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}

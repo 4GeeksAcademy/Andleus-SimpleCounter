@@ -6,7 +6,18 @@ import ReactDOM from "react-dom";
 import "../styles/index.css";
 
 //import your own components
-import Home from "./component/home.jsx";
+import Counter from "./component/ShowCounter.jsx";
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+function App(){
+    return(
+        <div>
+            <Counter/>
+        </div>
+    )
+}
+
+
+window.onload = () => {
+    //render your react application
+    ReactDOM.render(<App />, document.querySelector("#app"));
+}
